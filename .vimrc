@@ -11,9 +11,9 @@ set shiftwidth=2
 " Solarized config
 syntax enable
 set background=dark
-let t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
+set term=screen-256color
 
 "let g:netrw_liststyle=3
 
@@ -60,8 +60,8 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 " Bind F10 to tell you what type of element is underneath the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+  \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+  \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") .  ">"<CR>
 
 " vimwiki settings
 set nocompatible
