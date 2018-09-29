@@ -33,6 +33,18 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Terminal tabs open in same working directory
-export PROMPT_COMMAND="$PROMPT_COMMAND;update_terminal_cwd;"
+# export PROMPT_COMMAND="$PROMPT_COMMAND;update_terminal_cwd;"
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# Make solarized work in vim + tmux
+alias tmux="TERM=screen-256color-bce tmux"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
